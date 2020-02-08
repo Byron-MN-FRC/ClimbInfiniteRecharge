@@ -106,7 +106,7 @@ climb = new Climb();
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel(); 
         Robot.climb.motorConfig();
-        
+
     }
 
     /**
@@ -119,6 +119,7 @@ climb = new Climb();
         SmartDashboard.putNumber("SensorPos", Robot.climb.getHookMotor().getSelectedSensorPosition(Constants.kPIDLoopIdx));
         //SmartDashboard.putNumber("MotorOutputPercent", Robot.climb.getHookMotor()).getMotorOutputPercent());
         SmartDashboard.putNumber("ClosedLoopError" , Robot.climb.getHookMotor().getClosedLoopError(Constants.kPIDLoopIdx));
+        SmartDashboard.putNumber("ProximitySensor", Robot.climb.getProximity());
 
     }
 }

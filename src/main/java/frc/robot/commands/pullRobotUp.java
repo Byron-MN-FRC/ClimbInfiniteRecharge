@@ -51,7 +51,7 @@ public class pullRobotUp extends Command {
     @Override
     protected boolean isFinished() {
         System.out.println("Proximity =" + Robot.climb.getProximity());
-        return Robot.climb.getProximity() >= 3800;
+        return Robot.climb.getProximity() >= 1500;
     }
 
     // Called once after isFinished returns true
