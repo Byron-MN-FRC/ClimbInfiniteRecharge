@@ -104,7 +104,9 @@ climb = new Climb();
         // teleop starts running. If you want the autonomous to
         // continue until interrupted by another command, remove
         // this line or comment it out.
-        if (autonomousCommand != null) autonomousCommand.cancel();
+        if (autonomousCommand != null) autonomousCommand.cancel(); 
+        Robot.climb.motorConfig();
+        
     }
 
     /**
@@ -113,5 +115,10 @@ climb = new Climb();
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        SmartDashboard.putNumber("SensorVel", Robot.climb.getHookMotor().getSelectedSensorVelocity(Constants.kPIDLoopIdx));
+        SmartDashboard.putNumber("SensorPos", Robot.climb.getHookMotor().getSelectedSensorPosition(Constants.kPIDLoopIdx));
+        //SmartDashboard.putNumber("MotorOutputPercent", Robot.climb.getHookMotor()).getMotorOutputPercent());
+        SmartDashboard.putNumber("ClosedLoopError" , Robot.climb.getHookMotor().getClosedLoopError(Constants.kPIDLoopIdx));
+
     }
 }

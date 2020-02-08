@@ -38,6 +38,8 @@ public class pullRobotUp extends Command {
     // Called just before this Command runs the first time
     @Override
     protected void initialize() {
+       // Robot.climb.pullRobotUp = !Robot.climb.pullRobotUp();
+       Robot.climb.pullRobotUp();
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -48,17 +50,20 @@ public class pullRobotUp extends Command {
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-        return false;
+        System.out.println("Proximity =" + Robot.climb.getProximity());
+        return Robot.climb.getProximity() >= 3800;
     }
 
     // Called once after isFinished returns true
     @Override
     protected void end() {
+        Robot.climb.stopPullRobotUp();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     @Override
     protected void interrupted() {
+        end();
     }
 }
