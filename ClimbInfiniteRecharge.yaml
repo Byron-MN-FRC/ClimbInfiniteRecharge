@@ -72,7 +72,7 @@ Children:
           default: '0'
           name: Output PCM (Solenoid)
           validators: [Solenoid]
-          value: '0'
+          value: '10'
       Base: Solenoid
       Name: BuddyNetPiston
     Properties:
