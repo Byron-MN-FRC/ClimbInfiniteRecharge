@@ -11,7 +11,9 @@ public class ClimbConstants {
     public final static int winchClimbID = 14;    
 
 	// Hook Height constants
-	public final static double hookEncoderUnits = 10000;
+	public final static double hookUpEncoderUnits = 20000;
+	//52977 is full height encoder units
+	public final static double hookDownEncoderUnits = 0;
 
     public static final int kPIDLoopIdx = 0; // Check how it is done with talon
 
