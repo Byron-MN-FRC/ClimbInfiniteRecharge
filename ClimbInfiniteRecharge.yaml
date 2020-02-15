@@ -360,6 +360,28 @@ Children:
         name: Button on SmartDashboard, validators: null, value: true}
     Base: Command
     Name: deployBuddyNet
+  - Children: []
+    Properties:
+      Autonomous Selection: !!robotbuilder.data.properties.BooleanProperty {default: false,
+        name: Autonomous Selection, validators: null, value: false}
+      Parameters: !!robotbuilder.data.properties.ParametersProperty
+        default: []
+        name: Parameters
+        validators: null
+        value: []
+      Run When Disabled: !!robotbuilder.data.properties.BooleanProperty {default: false,
+        name: Run When Disabled, validators: null, value: false}
+      Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Requires, type: Subsystem, validators: null, value: Climb}
+      Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
+        default: &id008 []
+        name: Parameter presets
+        validators: null
+        value: *id008
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
+    Base: Command
+    Name: releaseWinch
   Properties: {}
   Base: Commands
   Name: Commands
@@ -371,22 +393,20 @@ Properties:
     name: Autonomous command parameters
     validators: null
     value: []
-  Java Package: !!robotbuilder.data.properties.StringProperty {default: frc.robot,
+  Java Package: !!robotbuilder.data.properties.StringProperty {default: org.usfirst.frc0000,
     name: Java Package, validators: null, value: org.usfirst.frc4859}
   Use Default Java Package: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Use Default Java Package, validators: null, value: true}
-  Team Number: !!robotbuilder.data.properties.IntegerProperty {default: 0, name: Team
-      Number, validators: null, value: 4859}
+  Team Number: !!robotbuilder.data.properties.IntegerProperty {default: 0, name: Team Number,
+    validators: null, value: 4859}
   Export Subsystems: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robotics
-      admin\', extension: null, folder: true, name: Wiring file location, validators: null,
-    value: 'C:\Users\heinz_\'}
-  Export Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robotics
-      admin\FRCProjects', extension: null, folder: true, name: Export Directory, validators: null,
-    value: 'C:\FRC_git'}
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robotics\',
+    extension: null, folder: true, name: Wiring file location, validators: null, value: 'C:\Users\heinz_\'}
+  Export Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robotics\FRCProjects',
+    extension: null, folder: true, name: Export Directory, validators: null, value: 'C:\FRC_git'}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}
 Base: Robot

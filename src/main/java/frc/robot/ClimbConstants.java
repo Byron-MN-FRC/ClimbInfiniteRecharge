@@ -11,7 +11,7 @@ public class ClimbConstants {
     public final static int winchClimbID = 14;    
 
 	// Hook Height constants
-	public final static double hookUpEncoderUnits = 20000;
+	public final static double hookUpEncoderUnits = 36300;
 	//52977 is full height encoder units
 	public final static double hookDownEncoderUnits = 0;
 
