@@ -148,12 +148,14 @@ addChild("BuddyNetPiston",buddyNetPiston);
     }
 
     public void pullRobotUp(){
-        winchMotor.set(-0.5);
+        winchMotor.set(-0.7);
         //hookMotor.set(-0.01);
-        while (hookMotor.getSelectedSensorPosition() >= 0){
+        if (hookMotor.getSelectedSensorPosition() >= 0){
             hookMotor.set(-0.1);
         }
-        hookMotor.set(0);
+        else {
+            hookMotor.set(0);
+        }
         //double hookDownEncoderUnits = ClimbConstants.hookDownEncoderUnits;
         //hookMotor.set(ControlMode.MotionMagic, hookDownEncoderUnits);
     }
@@ -162,6 +164,8 @@ addChild("BuddyNetPiston",buddyNetPiston);
         buddyWinchBack.set(0.4);
         buddyWinchFront.set(0.5);
     }
+
+    
     
     public void driveWithClimbJoystick(Joystick pJoystick){
         double y = -pJoystick.getY();
