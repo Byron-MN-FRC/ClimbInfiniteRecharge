@@ -126,7 +126,6 @@ private static WPI_TalonSRX winchMotor;
             return;
         }
         winchMotor.set(-0.7);
-        // hookMotor.set(-0.01);
         if (hookMotor.getSelectedSensorPosition() >= 0) {
             hookMotor.set(-0.1);
         } else {
