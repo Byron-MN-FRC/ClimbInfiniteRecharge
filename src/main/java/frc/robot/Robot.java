@@ -120,6 +120,7 @@ climb = new Climb();
         //SmartDashboard.putNumber("MotorOutputPercent", Robot.climb.getHookMotor()).getMotorOutputPercent());
         SmartDashboard.putNumber("ClosedLoopError" , Robot.climb.getHookMotor().getClosedLoopError(ClimbConstants.kPIDLoopIdx));
         SmartDashboard.putNumber("ProximitySensor", Robot.climb.getProximity());
+        SmartDashboard.putBoolean("cMode", Climb.cMode);
 
     }
 }

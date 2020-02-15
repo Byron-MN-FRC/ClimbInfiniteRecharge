@@ -235,7 +235,7 @@ Children:
           name: Command
           type: Command
           validators: *id006
-          value: deployLinearSlide
+          value: climbMode
         When to Run: !!robotbuilder.data.properties.ChoicesProperty
           choices: *id007
           default: whileHeld
@@ -425,10 +425,10 @@ Children:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: Climb}
       Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id008 []
+        default: []
         name: Parameter presets
         validators: null
-        value: *id008
+        value: []
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
     Base: Command
@@ -454,9 +454,9 @@ Properties:
     name: Export Subsystems, validators: null, value: true}
   Simulation World File: !!robotbuilder.data.properties.StringProperty {default: /usr/share/frcsim/worlds/GearsBotDemo.world,
     name: Simulation World File, validators: null, value: /usr/share/frcsim/worlds/GearsBotDemo.world}
-  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robotics\',
+  Wiring file location: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\spenc\',
     extension: null, folder: true, name: Wiring file location, validators: null, value: 'C:\Users\heinz_\'}
-  Export Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\robotics\FRCProjects',
+  Export Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\spenc\FRCProjects',
     extension: null, folder: true, name: Export Directory, validators: null, value: 'C:\FRC_git'}
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
     name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}

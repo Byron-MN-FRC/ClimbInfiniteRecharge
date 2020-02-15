@@ -65,7 +65,7 @@ public Joystick climbJoystick;
 climbJoystick = new Joystick(1);
 
 cMode = new JoystickButton(climbJoystick, 7);
-cMode.whenPressed(new deployLinearSlide());
+cMode.whenPressed(new climbMode());
 buddyUp = new JoystickButton(climbJoystick, 1);
 buddyUp.whileHeld(new pullBuddyUp());
 deployNet = new JoystickButton(climbJoystick, 3);
