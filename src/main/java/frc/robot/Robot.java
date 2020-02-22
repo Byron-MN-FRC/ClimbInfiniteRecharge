@@ -32,7 +32,8 @@ import frc.robot.subsystems.*;
  */
 public class Robot extends TimedRobot {
 
-    Command autonomousCommand;
+    public static final String Climb = null;
+	Command autonomousCommand;
     SendableChooser<Command> chooser = new SendableChooser<>();
 
     public static OI oi;
@@ -120,7 +121,7 @@ climb = new Climb();
         //SmartDashboard.putNumber("MotorOutputPercent", Robot.climb.getHookMotor()).getMotorOutputPercent());
         SmartDashboard.putNumber("ClosedLoopError" , Robot.climb.getHookMotor().getClosedLoopError(ClimbConstants.kPIDLoopIdx));
         SmartDashboard.putNumber("ProximitySensor", Robot.climb.getProximity());
-        SmartDashboard.putBoolean("cMode", Climb.cMode);
+        SmartDashboard.putBoolean("cMode", climb.cMode);
 
     }
 }
